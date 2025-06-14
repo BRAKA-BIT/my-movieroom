@@ -1,0 +1,144 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, input, button, select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Responsive container */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f1f3f6;
+    color: #222;
+    min-height: 100vh;
+    padding: 0 0.5em;
+}
+
+/* Header, Search, and Filters */
+.header {
+    padding: 1em 0;
+    text-align: center;
+}
+
+#search-input, #genre-dropdown {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1em;
+    padding: 0.7em 1em;
+    margin-bottom: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.4em;
+}
+
+#search-btn {
+    width: 100%;
+    padding: 0.8em;
+    font-size: 1em;
+    background: #0074D9;
+    color: #fff;
+    border: none;
+    border-radius: 0.4em;
+    margin-bottom: 1em;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#search-btn:active, #search-btn:hover {
+    background: #005fa3;
+}
+
+/* Movie Cards Layout */
+#movie-cards, #search-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+/* Movie Card */
+.movie-card {
+    background: #fff;
+    border-radius: 0.8em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    overflow: hidden;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.12s;
+}
+
+.movie-card:hover {
+    transform: translateY(-4px) scale(1.02);
+}
+
+.movie-thumbnail {
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: cover;
+    display: block;
+}
+
+.movie-info {
+    padding: 1em;
+    width: 100%;
+}
+
+.movie-info h3 {
+    font-size: 1.2em;
+    margin-bottom: 0.3em;
+}
+
+.movie-info p {
+    font-size: 0.98em;
+    color: #444;
+    margin-bottom: 0.2em;
+}
+
+.watch-btn {
+    margin-top: 0.5em;
+    width: 100%;
+    background: #FF4136;
+    color: #fff;
+    border: none;
+    border-radius: 0.4em;
+    padding: 0.8em 0;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.watch-btn:active, .watch-btn:hover {
+    background: #c82b23;
+}
+
+@media (max-width: 600px) {
+    #movie-cards, #search-results {
+        gap: 0.7em;
+    }
+    .movie-card {
+        max-width: 95vw;
+    }
+    .movie-info {
+        padding: 0.7em;
+    }
+    .movie-info h3 {
+        font-size: 1em;
+    }
+    .watch-btn {
+        font-size: 0.98em;
+        padding: 0.7em 0;
+    }
+    #search-btn, #search-input, #genre-dropdown {
+        font-size: 1em;
+        padding: 0.7em 0.9em;
+    }
+}
+
+/* Scroll improvements */
+body, html {
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}

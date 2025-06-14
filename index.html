@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME MOVIES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+           <h1>PRIME<span class="highlight">MOVIES</span></h1>
+        </div>
+       
+        <h6>"Your home to movies"</h6>
+        <div id="search-bar">
+            <input type="text" id="search-input" placeholder="Search for movies will be displayed down..">
+            <button id="search-btn">Search</button>
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="Newreleases.html">NewReleases</a></li>
+            <li><a href="trending.html">Trending</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="trending-section">
+            <h2>Trending Movies</h2>
+            <div id="genre-filter">
+                <label for="genre-dropdown">Filter by Genre:</label>
+                <select id="genre-dropdown">
+                    <option value="all">All</option>
+                    <!-- Genres will be dynamically added here -->
+                </select>
+            </div>
+            <div id="movie-cards">
+                <!-- Movie cards will be dynamically added here -->
+            </div>
+        </section>
+        <section id="search-results">
+            <h2>Search Results</h2>
+            <!-- Search results will be dynamically added here -->
+        </section>
+    </main>
+
+    <footer>
+        <div id="disclaimer">
+            <strong>**if your search results don't display the second time of your search , please refresh this page**</strong>
+        </div>
+        <p>&COPY; 2025 PRIME-TECH MOVIES | All rights reserved</p>
+    </footer>
+    <script src="index.js"></script>
+</body>
+</html>

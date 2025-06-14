@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trending Movies</title>
+    <link rel="stylesheet" href="style56.css">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h1>PRIME<span class="highlight">MOVIES</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="trending.html" class="active">Trending</a></li>
+                <li><a href="TVSHOWS.html">TV Shows</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="trending-section">
+            <h2>Trending Movies</h2>
+            <div id="trending-filter">
+                <button class="filter-btn active" onclick="fetchTrendingMovies('day')">Today</button>
+                <button class="filter-btn" onclick="fetchTrendingMovies('week')">This Week</button>
+            </div>
+            <div id="movie-cards">
+                <!-- Movie cards will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&COPY; 2025 PRIME MOVIES | All rights reserved</p>
+    </footer>
+    <script src="trending.js"></script>
+</body>
+</html>
