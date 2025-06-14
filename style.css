@@ -1,144 +1,259 @@
-/* Reset some default styles */
-body, h1, h2, h3, p, ul, li, input, button, select {
+body {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    background: linear-gradient(135deg, #0d253f, #032541);
+    color: #fff;
+    
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background: rgba(3, 37, 65, 0.9);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-/* Responsive container */
-body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: #f1f3f6;
-    color: #222;
-    min-height: 100vh;
-    padding: 0 0.5em;
+#logo h1 {
+    font-size: 2rem;
+    color: #01b4e4;
+    margin: 0;
+    font-weight: bold;
 }
 
-/* Header, Search, and Filters */
-.header {
-    padding: 1em 0;
+#logo .highlight {
+    color: #90cea1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap:0.2em;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #90cea1;
+}
+
+button {
+    background-color: #444;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #807979;
+    transform: scale(1.1);
+}
+
+
+section{
+    margin:2em;
+    background: rgba(30,30,30,0.9);
+    border-radius: 10px;
+    padding: 1.5em;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+audio{
+    width: 100%;
+    margin-top: 1em;
+    margin-right: 10px;
+    width: 200px;
+
+}
+
+footer{
+    margin-top: 5px;
+    padding: 12px 0;
+    background-color: #444;
+    color: #fff;
+    align-items: center;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    text-align: center;
+    text-align-last: center;
+
+}
+
+
+#trending-section {
+    margin: 2em;
     text-align: center;
 }
 
-#search-input, #genre-dropdown {
-    width: 100%;
-    max-width: 100%;
-    font-size: 1em;
-    padding: 0.7em 1em;
-    margin-bottom: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 0.4em;
-}
-
-#search-btn {
-    width: 100%;
-    padding: 0.8em;
-    font-size: 1em;
-    background: #0074D9;
-    color: #fff;
-    border: none;
-    border-radius: 0.4em;
+#genre-filter {
     margin-bottom: 1em;
-    cursor: pointer;
-    transition: background 0.2s;
 }
 
-#search-btn:active, #search-btn:hover {
-    background: #005fa3;
+#genre-dropdown {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
 }
 
-/* Movie Cards Layout */
-#movie-cards, #search-results {
+#movie-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
     justify-content: center;
-    margin-bottom: 1em;
+    gap: 1em;
 }
 
-/* Movie Card */
 .movie-card {
-    background: #fff;
-    border-radius: 0.8em;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    overflow: hidden;
-    width: 100%;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.12s;
+    background: #444;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    width: 200px;
+    text-align: center;
+    padding: 1em;
+    transition: transform 0.3s ease-in-out;
 }
 
 .movie-card:hover {
-    transform: translateY(-4px) scale(1.02);
+    transform: scale(1.05);
 }
 
 .movie-thumbnail {
     width: 100%;
-    aspect-ratio: 2/3;
-    object-fit: cover;
-    display: block;
-}
-
-.movie-info {
-    padding: 1em;
-    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
 }
 
 .movie-info h3 {
     font-size: 1.2em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
 }
 
 .movie-info p {
-    font-size: 0.98em;
-    color: #444;
-    margin-bottom: 0.2em;
+    font-size: 0.9em;
+    margin: 0.3em 0;
 }
 
 .watch-btn {
-    margin-top: 0.5em;
-    width: 100%;
-    background: #FF4136;
-    color: #fff;
+    background-color: #ffcc00;
+    color: #111;
     border: none;
-    border-radius: 0.4em;
-    padding: 0.8em 0;
-    font-size: 1em;
+    padding: 10px 15px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background 0.18s;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
 }
 
-.watch-btn:active, .watch-btn:hover {
-    background: #c82b23;
+.watch-btn:hover {
+    background-color: #e6b800;
 }
 
-@media (max-width: 600px) {
-    #movie-cards, #search-results {
-        gap: 0.7em;
-    }
-    .movie-card {
-        max-width: 95vw;
-    }
-    .movie-info {
-        padding: 0.7em;
-    }
-    .movie-info h3 {
-        font-size: 1em;
-    }
-    .watch-btn {
-        font-size: 0.98em;
-        padding: 0.7em 0;
-    }
-    #search-btn, #search-input, #genre-dropdown {
-        font-size: 1em;
-        padding: 0.7em 0.9em;
-    }
+.disclaimer {
+    font-size: 0.9em;
+    color: #ccc;
+    text-align: center;
+    margin-top: 1em;
+    padding: 0.5em;
+    background-color: #222;
+    border-top: 1px solid #444;
 }
 
-/* Scroll improvements */
-body, html {
-    -webkit-overflow-scrolling: touch;
-    scroll-behavior: smooth;
+#search-bar {
+    margin-bottom: 1em;
+}
+
+#search-input {
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    width: 300px;
+}
+
+#search-btn {
+    background-color: #ffcc00;
+    color: #111;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-left: 10px;
+}
+
+#search-btn:hover {
+    background-color: #e6b800;
+}
+
+header ul {
+    list-style: none;
+    padding: 0;
+    margin: 1em 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+header ul li {
+    display: inline;
+}
+
+
+#logo h1{   
+    font-size: 2rem;
+    color: #01b4e4;
+    margin: 0;
+    font-weight: bold;
+    
+}
+
+#logo .highlight {
+    color: #90cea1;
+}
+header ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header ul li a:hover {
+    background-color: #444;
+}
+
+#search-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
 }
